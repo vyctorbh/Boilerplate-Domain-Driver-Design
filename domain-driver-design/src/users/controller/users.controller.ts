@@ -1,10 +1,12 @@
-import { Controller, Inject, Post, Res, Body, HttpStatus, UsePipes, Get, Param, ParseUUIDPipe } from '@nestjs/common';
+import { Controller, Inject, Post, Res, Body, HttpStatus, UsePipes, Get, Param, UseInterceptors } from '@nestjs/common';
 import { UserDomain } from '../domain/user.domain';
 import { TYPES } from '../interfaces/types';
 import { ICreateUserApplication } from '../interfaces/applications/create.user.application.interface';
 import { ValidationPipe } from '../../common/validation.pipe';
 import { IGetUserApplication } from '../interfaces/applications/get.user.application.interface';
+import { SentryInterceptor } from '../../common/sentry.interceptor';
 
+@UseInterceptors(SentryInterceptor)
 @Controller('users')
 export class UsersController {
     constructor(

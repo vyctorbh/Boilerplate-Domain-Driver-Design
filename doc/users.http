@@ -18,4 +18,4 @@ Content-Type: {{contentType}}
 GET http://{{host}}/users HTTP/1.1
 
 ### Get One User
-GET http://{{host}}/users/61474e5084a30eabb07347b3 HTTP/1.1
+GET http://{{host}}/users/61474e5084a30eabb07347b333 HTTP/1.1
