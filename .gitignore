@@ -4,3 +4,5 @@
 /domain-driver-design/node_modules
 /domain-driver-design/dist
 
+/domain-driver-design/.env
+
