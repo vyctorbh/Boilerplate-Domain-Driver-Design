@@ -26,8 +26,8 @@ describe('ValidationPipe', () => {
             try {
                 await validationPipe.transform(null, { data: '', type: 'body', metatype: String });
             } catch (error) {
-                expect(error.message.message).toEqual('No data submitted');
-                expect(error.message.statusCode).toEqual(400);
+                expect(error.response.message).toEqual('No data submitted');
+                expect(error.response.statusCode).toEqual(400);
                 expect(error).toBeInstanceOf(BadRequestException);
             }
         });
@@ -43,8 +43,8 @@ describe('ValidationPipe', () => {
             try {
                 await validationPipe.transform(newUser, { data: '', type: 'body', metatype: TestDomain });
             } catch (error) {
-                expect(error.message.message).toEqual('Invalid Payload');
-                expect(error.message.errors.emailisEmail).toEqual('email must be an email');
+                expect(error.response.message).toEqual('Invalid Payload');
+                expect(error.response.errors.emailisEmail).toEqual('email must be an email');
                 expect(error).toBeInstanceOf(HttpException);
             }
         });

@@ -25,13 +25,13 @@ describe('GetUserService', () => {
     describe('findById', () => {
         it('should find user by id', async () => {
             const user: User = {
-                userId: '123123123',
+                _id: '61474e5084a30eabb07347b3',
                 fullName: 'Rafael Pezzetti',
                 password: '123456',
                 email: 'rafael@pezzetti.com',
             };
             jest.spyOn(repositoryMock, 'findOne').mockResolvedValueOnce(user);
-            expect(await service.getById(user.userId)).toEqual(user);
+            expect(await service.getById(user._id)).toEqual(user);
             expect(repositoryMock.findOne).toBeCalled();
         });
     });

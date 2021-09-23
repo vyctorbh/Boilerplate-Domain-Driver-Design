@@ -27,7 +27,7 @@ describe('CreateUserService', () => {
     describe('create', () => {
         it('should create user', async () => {
             const user: User = {
-                userId: '123123123',
+                _id: '123123123',
                 fullName: 'Rafael Pezzetti',
                 password: '123456',
                 email: 'rafael@pezzetti.com',

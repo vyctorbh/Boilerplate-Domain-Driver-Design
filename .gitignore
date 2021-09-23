@@ -5,4 +5,5 @@
 /domain-driver-design/dist
 
 /domain-driver-design/.env
+/domain-driver-design/docker-compose.yml
 
