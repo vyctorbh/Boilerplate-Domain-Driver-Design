@@ -5,9 +5,9 @@ import { userInfo } from 'os';
 
 const user = {
     _id: '123123123',
-    fullName: 'Rafael Pezzetti',
+    fullName: 'Victor Teixeira',
     password: '123456',
-    email: 'rafael@pezzetti.com',
+    email: 'victorteixeira@falconi.com',
 };
 
 class CreateUserApplicationMock {

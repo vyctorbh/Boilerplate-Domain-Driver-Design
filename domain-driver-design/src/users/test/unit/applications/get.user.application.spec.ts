@@ -6,9 +6,9 @@ import { NotFoundException } from '@nestjs/common';
 
 const user: User = {
     _id: '61474e5084a30eabb07347b3',
-    fullName: 'Rafael Pezzetti',
+    fullName: 'Victor Teixeira',
     password: '123456',
-    email: 'rafael@pezzetti.com',
+    email: 'victorteixeira@falconi.com',
 };
 
 class GetUserService {
