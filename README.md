@@ -37,10 +37,10 @@ List Features
 - [x] TypeORM
    - [x] MongoDB
 
-- [] Sentry -> loading...
-- [] Test Case
-- [] Health check
-- [] Dockerfile
+- [x] Sentry
+- [x] Test Case
+- [] Health check -> loading...
+- [x] Dockerfile
 - [] Bootstrap config
 - [] Cache
 ---

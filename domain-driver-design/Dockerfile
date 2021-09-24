@@ -1,14 +1,30 @@
-FROM node:12.16-alpine
+FROM node:12.19.0-alpine3.9 AS development
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-ENV PATH /app/node_modules/.bin:$PATH
+COPY package*.json ./
 
-COPY package.json ./
+RUN npm install glob rimraf
 
-RUN yarn --silent
+RUN npm install --only=development
 
-# COPY . .
-# EXPOSE 5000
+COPY . .
 
-CMD "yarn start:prod"
+RUN npm run build
+
+FROM node:12.19.0-alpine3.9 as production
+
+ARG NODE_ENV=production
+ENV NODE_ENV=${NODE_ENV}
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install --only=production
+
+COPY . .
+
+COPY --from=development /usr/src/app/dist ./dist
+
+CMD ["node", "dist/main"]

@@ -5,21 +5,16 @@ const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
 const database = process.env.DB_DATABASE;
 const environment = process.env.NODE_ENV;
+const db_url = process.env.DB_URL;
 
 module.exports = {
   type: connection,
-  host: host,
-  port: port,
-  username: username,
-  password: password,
-  database: database,
+  "url": db_url,
+  "useNewUrlParser": true,
+  "synchronize": true,
+  "logging": true,
 
   entities: ['dist/**/*.entity.js'],
-
-  synchronize: false,
-
-  logging: true,
-  logger: 'file',
 
   //migrationsRun: environment === 'test', // I prefer to run manually in dev
   //migrationsTableName: 'migrations',
