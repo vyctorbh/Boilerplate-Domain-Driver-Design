@@ -35,11 +35,11 @@ Initial project for building microservices with nodejs + NestJS
 ## Features
 List Features
 - [x] TypeORM
-   - [x] MongoDB
+   - [x] Postgres
 
 - [x] Sentry
 - [x] Test Case
-- [] Health check -> loading...
+- [x] Health check
 - [x] Dockerfile
 - [] Bootstrap config
 - [] Cache
