@@ -8,8 +8,7 @@ POST http://{{host}}/users/create HTTP/1.1
 Content-Type: {{contentType}}
 
   {
-    "fullName": "fvdavid2",
-    "password": "123456789",
+    "name": "fvdavid2",
     "email": "fv@halunix.com"
   }
 
@@ -18,4 +17,4 @@ Content-Type: {{contentType}}
 GET http://{{host}}/users HTTP/1.1
 
 ### Get One User
-GET http://{{host}}/users/614e064ab63a79835f37272022 HTTP/1.1
+GET http://{{host}}/users/1 HTTP/1.1

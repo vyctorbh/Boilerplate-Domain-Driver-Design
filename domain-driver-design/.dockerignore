@@ -4,6 +4,7 @@
 coverage
 docker-compose.yml
 README.md
+ormlogs.log
 .env
 
 # Node Files #

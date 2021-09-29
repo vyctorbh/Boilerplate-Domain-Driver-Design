@@ -4,9 +4,8 @@ import { TYPES } from '../../../interfaces/types';
 import { userInfo } from 'os';
 
 const user = {
-    _id: '123123123',
-    fullName: 'Victor Teixeira',
-    password: '123456',
+    id: '123123123',
+    name: 'Victor Teixeira',
     email: 'victorteixeira@falconi.com',
 };
 
@@ -58,7 +57,7 @@ describe('Users Controller', () => {
         it('should get user by id', async () => {
             jest.spyOn(getUserAppMock, 'getById');
 
-            expect(await controller.findOne(user._id)).toEqual(user);
+            expect(await controller.findOne(user.id)).toEqual(user);
             expect(getUserAppMock.getById).toBeCalled();
         });
     });

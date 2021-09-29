@@ -5,9 +5,8 @@ import { TYPES } from '../../../interfaces/types';
 import { NotFoundException } from '@nestjs/common';
 
 const user: User = {
-    _id: '61474e5084a30eabb07347b3',
-    fullName: 'Victor Teixeira',
-    password: '123456',
+    id: '61474e5084a30eabb07347b3',
+    name: 'Victor Teixeira',
     email: 'victorteixeira@falconi.com',
 };
 
@@ -37,16 +36,16 @@ describe('GetUserApplication', () => {
 
     describe('getById', () => {
         it('should get user by id', async () => {
-            expect(await application.getById(user._id)).toEqual(user);
+            expect(await application.getById(user.id)).toEqual(user);
         });
 
         it('throws 404 error when user is not found', async () => {
             jest.spyOn(service, 'getById').mockImplementation(() => null);
             try {
-                await application.getById(user._id);
+                await application.getById(user.id);
             } catch (error) {
                 expect(error).toBeInstanceOf(NotFoundException);
-                expect(error.response.message).toEqual(`User with id ${user._id} was not found`);
+                expect(error.response.message).toEqual(`User with id ${user.id} was not found`);
             }
         });
     });

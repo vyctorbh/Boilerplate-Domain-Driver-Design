@@ -8,4 +8,4 @@
 /domain-driver-design/.env.local
 /domain-driver-design/.development.env
 /domain-driver-design/docker-compose.yml
-
+/domain-driver-design/ormlogs.log

@@ -11,6 +11,8 @@ import {
   TerminusModule
 } from '@nestjs/terminus';
 
+import {OrmConfig} from './ormconfig'
+
 @Module({
   imports: [
     UsersModule,

@@ -27,9 +27,8 @@ describe('CreateUserApplication', () => {
     describe('create', () => {
         it('should create user', async () => {
             const user: User = {
-                _id: '123123123',
-                fullName: 'Victor Teixeira',
-                password: '123456',
+                id: '123123123',
+                name: 'Victor Teixeira',
                 email: 'victorteixeira@falconi.com',
             };
             expect(await application.create(user)).toEqual(user);
